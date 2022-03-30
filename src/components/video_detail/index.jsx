@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './styles.module.css';
+import React from "react";
+import styles from "./styles.module.css";
 
 const VideoDetail = ({ video }) => {
   return (
@@ -14,9 +14,12 @@ const VideoDetail = ({ video }) => {
         frameBorder="0"
         allowFullScreen
       />
-      <h2>{video.snippet.title}</h2>
-      <h3>{video.snippet.channelTitle}</h3>
+      <h2 style={{ marginBottom: "5px" }}>{video.snippet.title}</h2>
+      <hr />
+      <h3 style={{ marginBottom: "8px" }}>{video.snippet.channelTitle}</h3>
+      <hr />
       <pre className={styles.description}>{video.snippet.description}</pre>
+      <hr />
     </section>
   );
 };

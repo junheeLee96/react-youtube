@@ -5,7 +5,6 @@ import SearchHeader from "./components/search_header";
 import VideoDetail from "./components/video_detail";
 
 function App({ youtube }) {
-  console.log(youtube);
   const [videos, setVideos] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState(null);
 
