@@ -1,38 +1,203 @@
-.App {
-  text-align: center;
+.App {  
+  width:100%;
+  margin:0;
+  padding:0;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Container{
+  max-width: 2000px;
+  width:95%;
+  display:grid;
+  padding-left:10px;
+  grid-template-columns: 12% 1fr;
+  grid-template-rows: auto;
+  grid-gap: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Header{
+  grid-column: 1 / 3;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 10px;
+  color:white;
+  padding:15px;
+  background-color: rgb(53, 53, 53);
 }
 
-.App-link {
-  color: #61dafb;
+.HeaderWrap{
+  width:100%;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.HeaderWrap input{
+  font-size:16px;
+  width:70%;
+  padding:10px;
+  border: 0;
+  outline: none;
+  float: left;
+}
+
+.HeaderWrap button{
+  width:27%;
+  height:100%;
+  border:0;
+  background:#1b5ac2;
+  outline: none;
+  float: right;
+  color:#ffffff;
+  padding:0;
+}
+
+
+.SideBar{
+  width:100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.Home{
+  display:grid;
+  width:100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.Home-selectedVideo{
+  display: grid;
+  width:100%;
+  grid-template-columns: 70% 1fr;
+}
+
+
+.VideoItemsWrap{
+  background-color: antiquewhite;
+  width:100%;
+  max-width: 1600px;
+  margin:0;
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-gap:20px;
+}
+
+.VideoItemWrap-selectedVideo{
+  width:100%;
+  display:grid;
+  grid-template-columns: 100%;
+  grid-gap:20px;
+  padding-left: 10px;
+}
+
+
+.VideoItem{
+  cursor: pointer;
+}
+
+.VideoItem-selectedVideo{
+  cursor: pointer;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.SearchWrap{
+  width:100%;
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap:10px;
+}
+
+.SearchItem{
+  cursor: pointer;
+  display:grid;
+  grid-template-columns: auto 1fr;
+  grid-gap:10px;
+}
+
+.SearchItem img{
+  grid-row:1 / 3;
+}
+
+.VideoItem-Img{
+  grid-row: 1 / 3;
+}
+
+.Videobar{
+  width:100%;
+  height:500px;
+}
+
+
+@media (max-width:850px) {
+
+  .Container{
+    grid-template-columns: 1fr;
   }
-  to {
-    transform: rotate(360deg);
+
+  .Home{
+    width:100%;
+
+  }
+
+  .MenuBtn{
+    display: none;
+  }
+
+  .SideBar{
+    /* position: fixed;
+    width:100%;
+    height:60%;
+    overflow: scroll;
+    top:10%;
+    z-index: 99; */
+    display: none;
+  }
+
+  .SlideBar-header{
+    display:flex;
+    width:100%;
+    justify-content: center;
+  }
+
+  .SlideBar-header-exit{
+    position:absolute;
+    right:20px;
+  }
+
+  .VideoItemsWrap, .VideoItemWrap-selectedVideo, .Home-selectedVideo{
+    grid-template-columns: 1fr;
+    width:100%;
+  }
+
+  .VideoItemsWrap{
+    
+  }
+
+  .VideoItemWrap-selectedVideo{
+    padding:0;
+  }
+
+  .VideoItem{
+    width:100%;
+  }
+
+  
+
+  .Videobar{
+    width:100%;
+    height: 25vh;
+  }
+
+  .YOUTUBE-APP{
+    display: none;
   }
 }
